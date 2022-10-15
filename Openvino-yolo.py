@@ -378,7 +378,7 @@ def main():
             color = (int(min(obj['class_id'] * 12.5, 255)),
                      min(obj['class_id'] * 7, 255), min(obj['class_id'] * 5, 255))
             color1 = (0,0,255)
-            color2 = (0,255,0)
+            color2 = (255,255,255)
             color3 = (0,0,0)
 
             det_label = labels_map[obj['class_id']] if labels_map and len(labels_map) >= obj['class_id'] else \
