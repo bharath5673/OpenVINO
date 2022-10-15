@@ -379,7 +379,7 @@ def main():
                      min(obj['class_id'] * 7, 255), min(obj['class_id'] * 5, 255))
             color1 = (0,0,255)
             color2 = (255,255,255)
-            color3 = (0,0,0)
+            color3 = (20,20,20)
 
             det_label = labels_map[obj['class_id']] if labels_map and len(labels_map) >= obj['class_id'] else \
                 str(obj['class_id'])
@@ -398,7 +398,7 @@ def main():
             cv2.rectangle(frame, (obj['xmin'], obj['ymin']), (obj['xmax'], obj['ymax']), color1, 2)
             cv2.putText(frame,
                         label,
-                        (obj['xmin'], obj['ymin'] - 7), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color2, 1)
+                        (obj['xmin'], obj['ymin'] - 7), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color2, 1)
 
         # Draw performance stats over frame
         inf_time_message = "Inference time: N\A for async mode" if is_async_mode else \
